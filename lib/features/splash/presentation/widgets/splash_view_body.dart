@@ -1,5 +1,5 @@
 import 'package:e_commerce/core/utils/app_images.dart';
-import 'package:e_commerce/features/onbording/presentation/views/onbording_view.dart';
+import 'package:e_commerce/features/onbording/presentation/views/onboarding_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -24,7 +24,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Row(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [SvgPicture.asset(Assets.imagesBranch)],
         ),
         SvgPicture.asset(Assets.imagesSplashLogo),
@@ -35,7 +35,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
 
   void excuteNavigation() {
     Future.delayed(Duration(seconds: 2), () {
-      Navigator.pushReplacementNamed(context, OnbordingView.routName);
+      Navigator.pushReplacementNamed(context, OnboardingView.routName);
     });
   }
 }

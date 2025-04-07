@@ -27,5 +27,6 @@ class Assets {
 
   /// Assets for imagesVector (2)
   /// assets/images/Vector (2).svg
-  static const String imagesBackground = "assets/images/Vector (2).svg";
+  static const String imagesBackground2 = "assets/images/Vector (2).svg";
+  static const String imagesBackground1 = "assets/images/background1.svg";
 }
