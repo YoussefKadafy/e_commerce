@@ -41,8 +41,9 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       bool isOnBoardingSeen = Prefs.getBool(kIsOnBoardingKey) ?? false;
       if (isOnBoardingSeen) {
         Navigator.pushReplacementNamed(context, LoginView.routName);
+      } else {
+        Navigator.pushReplacementNamed(context, OnboardingView.routName);
       }
-      Navigator.pushReplacementNamed(context, OnboardingView.routName);
     });
   }
 }

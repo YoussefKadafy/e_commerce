@@ -1,13 +1,17 @@
 import 'package:e_commerce/core/services/shared_preferences_singltone.dart';
+import 'package:e_commerce/core/utils/app_colors.dart';
 import 'package:e_commerce/features/splash/presentation/views/splash_view.dart';
 import 'package:e_commerce/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'core/helper_functions/on_generate_routes.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   final prefs = Prefs();
   await prefs.init();
   SystemChrome.setSystemUIOverlayStyle(
@@ -37,7 +41,11 @@ class FruitsHub extends StatelessWidget {
       onGenerateRoute: onGenerateRoutes,
       initialRoute: SplashView.splahName,
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: 'Cairo'),
+      theme: ThemeData(
+        fontFamily: 'Cairo',
+        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.appPrimaryColor),
+        scaffoldBackgroundColor: Colors.white,
+      ),
     );
   }
 }

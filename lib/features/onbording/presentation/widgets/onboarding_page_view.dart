@@ -44,7 +44,7 @@ class OnBoardingPageView extends StatelessWidget {
         ),
         PageViewItem(
           isVisible: false,
-          image: Assets.imagesPineappleCuate,
+          image: Assets.imagePinappleCuate,
           backgroundImage: Assets.imagesBackground2,
           title: Center(
             child: Text(
